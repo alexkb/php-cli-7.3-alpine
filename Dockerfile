@@ -4,7 +4,7 @@ FROM php:7.3-cli-alpine3.9
 # and https://github.com/docker-library/php/issues/279#issuecomment-236441847
 RUN set -xe \
     && apk add --update icu \
-    && apk add --no-cache --virtual .php-deps make libzip-dev \
+    && apk add --no-cache --virtual .php-deps make libzip-dev libxslt \
     && apk add --no-cache --virtual .build-deps \
         icu-dev \
         g++ \
